@@ -1,2 +1,3 @@
 # myPortfolioPage
-My portfoilo page~!
+You can look my portfoilo page at https://johanzhu.github.io/myPortfolioPage/
+!
