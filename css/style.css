@@ -1,0 +1,18 @@
+*{margin: 0;padding: 0;}
+/*公用*/
+.fl{float: left;}
+.fr{float: right;}
+
+.backgroundFixed{
+	height: 1500px;
+}
+.firstBc,
+.secondBc,
+.thirdBc{
+	height: 500px;
+}
+.firstBc{background-color: #12110F;color: #E5D4CA;}
+.firstBc li{list-style-type: none;float: right;}
+.secondBc{background-color:#161513 }
+.thirdBc{background-color: #12110F}
+
