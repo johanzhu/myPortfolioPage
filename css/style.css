@@ -1,18 +1,139 @@
-*{margin: 0;padding: 0;}
-/*公用*/
-.fl{float: left;}
-.fr{float: right;}
-
-.backgroundFixed{
-	height: 1500px;
+/*header-start*/
+html,body{width: 100%;height: 100%;overflow-x: hidden;overflow-y: hidden;
 }
-.firstBc,
-.secondBc,
-.thirdBc{
-	height: 500px;
+.header{
+	height: 42px;
+	background-color: white;
+	border: 2px solid black;
+	position: relative;
+	z-index: 98;
 }
-.firstBc{background-color: #12110F;color: #E5D4CA;}
-.firstBc li{list-style-type: none;float: right;}
-.secondBc{background-color:#161513 }
-.thirdBc{background-color: #12110F}
+.name{
+	font-family: "微软雅黑";
+	line-height: 42px;
+	font-size: 24px;
+	margin-left: 40px;
+}
+.navBar li{
+	float: left;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	line-height: 42px;
+	margin: 0 20px;
+	padding: 0 20px;
+	cursor: pointer;
+	text-align: center;
+}
+#about:hover{
+	background-color: #CCC
+}
+#home:hover{
+	background-color: #CCC
+}
+#portfolio:hover{
+	background-color: #CCC
+}
+#contact:hover{
+	background-color: #CCC
+}
+/*header-end*/
+/*aside-start*/
+#aside{
+	box-sizing: border-box;
+	width: 200px;
+	height: 100%;
+	border-top: 2px solid #313140;
+	background-color: black;
+	color: white;
+	font-family: "微软雅黑";
+	text-indent: 2em;
+	line-height: 20px;
+	padding: 120px 40px 0 40px;
+	position: absolute;
+}
+#aside a{color: white;}
+#home-text,
+#about-text,
+#portfolio-text,
+#contact-text{
+	opacity: 0;
+	position: absolute;
+	width: 120px;
+	transition: opacity 2s ease; 
+}
+.show{
+	opacity: 1;
+      }
 
+/*切换用内联标签*/
+/*aside-end*/
+/*stage-start*/
+#stage{
+	position: absolute;
+	left: 200px;
+	width: calc(100% - 200px);
+	height: 100%;
+	box-sizing: border-box;
+	border-top: none;
+	color: black;
+}
+#stage a{color: black;}
+/*stage-end*/
+/*左侧栏标签*/
+#home-text ul{
+	position: absolute;
+	z-index: 999;
+	left: -30px;
+	top: 100px;
+}
+#home-text img{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+}
+#about-text a{
+	position: absolute;
+	z-index: 999;
+	cursor: pointer;
+}
+#portfolio-text a{
+	position: absolute;
+	z-index: 999;
+	cursor: pointer;
+}
+#contact-text a{
+	position: absolute;
+	z-index: 999;
+	cursor: pointer;
+	left: -30px;
+}
+#contact-text .mail{
+	margin-left: -30px;
+}
+/*text部分结束*/
+/*子弹部分开始*/
+#twitter,
+#github,
+#github2,
+#freecodecamp,
+#johanblog,
+#jianli,
+#aboutme,
+#mail{
+	position: absolute;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+/*home*/
+#twitter{left: 200px;top:500px;}
+#github{left: 200px;top:400px;}
+#johanblog{left: 200px;top:300px;}
+#freecodecamp{left: 200px;top:200px;}
+/*about*/
+#jianli{left: 200px;top:450px;}
+#aboutme{left: 200px;top:350px;}
+/*portfolio*/
+#github2{left: 200px;top:250px;}
+/*contact*/
+#mail{left: 200px;top:150px;}
+/*子弹部分结束*/
