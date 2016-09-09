@@ -278,10 +278,57 @@ function contactme(){
 function Dcontactme(){
 	scene.remove(contactmeText);
 }
-
 init();
 createIframe();
 createLights();
 render();
-
-
+/*开启三维点击插件*/
+var domEvents   = new THREEx.DomEvents(camera, renderer.domElement);
+/*推特点击事件*/
+domEvents.addEventListener(twitterText,'click',function(){
+	window.open('https://twitter.com/johanzhu9527');
+})
+var twitterUrl = 'https://twitter.com/johanzhu9527';
+var twitterBox = THREEx.Linkify(domEvents,twitterText,twitterUrl,true);
+/*GITHUB点击事件*/
+domEvents.addEventListener(githubText,'click',function(){
+	window.open(githubUrl);
+})
+var githubUrl = 'https://github.com/johanzhu';
+var githubBox = THREEx.Linkify(domEvents,githubText,githubUrl,true);
+/*博客点击事件*/
+domEvents.addEventListener(blogText,'click',function(){
+	window.open(blogUrl);
+})
+var blogUrl = 'https://johanzhu.github.io/';
+var blogBox = THREEx.Linkify(domEvents,blogText,blogUrl,true);
+/*freecodecamp点击事件*/
+domEvents.addEventListener(freeText,'click',function(){
+	window.open(freeUrl);
+})
+var freeUrl = 'https://freecodecamp.cn/johanzhu';
+var freeBox = THREEx.Linkify(domEvents,freeText,freeUrl,true);
+/*简历点击事件*/
+domEvents.addEventListener(resumeText,'click',function(){
+	window.open(resumeUrl);
+})
+var resumeUrl = '';
+var resumeBox = THREEx.Linkify(domEvents,resumeText,resumeUrl,true);
+/*aboume点击事件*/
+domEvents.addEventListener(aboutmeText,'click',function(){
+	window.open(aboutmeUrl);
+})
+var aboutmeUrl = 'https://johanzhu.github.io/about/';
+var aboutmeBox = THREEx.Linkify(domEvents,aboutmeText,aboutmeUrl,true);
+/*gihub2点击事件*/
+domEvents.addEventListener(githubText2,'click',function(){
+	window.open(githubUrl2);
+})
+var githubUrl2 = 'https://github.com/johanzhu';
+var githubBox2 = THREEx.Linkify(domEvents,githubText2,githubUrl2,true);
+/*联系我点击事件*/
+domEvents.addEventListener(contactmeText,'click',function(){
+	window.open(contactmeUrl);
+})
+var contactmeUrl = 'https://www.baidu.com/s?wd=%E9%82%AE%E7%AE%B1&rsv_spt=1&rsv_iqid=0xd8d414b50004ead7&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=9&rsv_sug1=8&rsv_sug7=100';
+var contactmeBox = THREEx.Linkify(domEvents,contactmeText,contactmeUrl,true);
