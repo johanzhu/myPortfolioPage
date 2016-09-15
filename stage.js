@@ -31,6 +31,7 @@ function init(){
 	container = document.getElementById('stage');
 	container.appendChild(renderer.domElement);
 	window.addEventListener('resize', onWindowResize, false);
+	window.addEventListener('load', onWindowResize, false);
 }
 function onWindowResize(){
 	    WIDTH=window.innerWidth - leftMenuWidth;
