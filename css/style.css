@@ -14,6 +14,7 @@ html,body{width: 100%;height: 100%;overflow-x: hidden;overflow-y: hidden;
 	font-size: 24px;
 	margin-left: 40px;
 }
+.navBar{position: relative;}
 .navBar li{
 	float: left;
 	font-size: 20px;
@@ -137,3 +138,43 @@ html,body{width: 100%;height: 100%;overflow-x: hidden;overflow-y: hidden;
 /*contact*/
 #mail{left: 200px;top:150px;}
 /*子弹部分结束*/
+/*自适应隐藏部分*/
+#response img{
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 10%;
+	top: 10px;
+	display: none;
+	cursor: pointer;
+}
+
+/*NAVBAR自适应*/
+@media only screen and (max-width: 840px) {
+	#home,#about,#portfolio,#contact{
+		display: none;
+	}
+	#response img{
+		display: block;
+	}
+	/*新的导航条样式*/
+	.header{position: relative;}
+	.newNav{
+		font-family: "微软雅黑";
+		color: black;
+		position: absolute;
+		left: 88%;
+		top:120%;
+		display: none;
+	}
+	.newNav li{
+		cursor: pointer;
+		text-align: center;
+	}
+	.newNav li:hover{
+		background-color: #CCCCCC
+	}
+}
+
+
+
