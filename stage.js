@@ -333,25 +333,11 @@ domEvents.addEventListener(contactmeText,'click',function(){
 })
 var contactmeUrl = 'https://www.baidu.com/s?wd=%E9%82%AE%E7%AE%B1&rsv_spt=1&rsv_iqid=0xd8d414b50004ead7&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=9&rsv_sug1=8&rsv_sug7=100';
 var contactmeBox = THREEx.Linkify(domEvents,contactmeText,contactmeUrl,true);
+/*简历点击事件*/
+domEvents.addEventListener(resumeText,'click',function(){
+	window.open(contactmeUrl);
+})
+var resumeUrl = 'https://johanzhu.github.io/MyResume/';
+var resumeBox = THREEx.Linkify(domEvents,resumeText,resumeUrl,true);
 
 
-
-/*创建飞鸟*/
-var bird,
-    birdBody,
-    leftWing,
-    rightWing;
-var birdMat = new THREE.MeshBasicMaterial({
-	color : 0x000000,
-	opacity : 0.6,
-	transparent : true
-});
-bird = new THREE.Group();
-var birdBodyShape = new THREE.Shape();
-birdBodyShape.moveTo(10,0,0);
-birdBodyShape.lineTo(0,10,0);
-birdBodyShape.lineTo(-20,0,0);
-birdBodyShape.lineTo(10,0,0);
-var bodyGeo = new THREE.ShapeGeometry(birdBody);
-birdBody = new THREE.Mesh(bodyGeo,birdMat);
-scene.add(birdBody);
