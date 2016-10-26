@@ -32,7 +32,7 @@ function moveAndLookAt(camera, dstpos, dstlookat, options) {
     camera.quaternion = qm;
     
     var o = {t: 0};
-    new TWEEN.Tween(o).to({t: 1}, options.duration).onUpdate(function () {
+    new TWEEN.Tween(o).to({t: 0.3}, options.duration).onUpdate(function () {
       THREE.Quaternion.slerp(qa, qb, qm, o.t);
       camera.quaternion.set(qm.x, qm.y, qm.z, qm.w);
     }).start();
